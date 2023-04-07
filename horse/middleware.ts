@@ -10,7 +10,7 @@ type ConfigData = {
 
 const server =
   process.env.NODE_ENV === "production"
-    ? process.env.NEXT_PUBLIC_DASH_API_BASE_URL
+    ? "https://ecls-demo-dash.vercel.app"
     : "http://localhost:3000";
 
 async function log(req: NextRequest, route: string, data: ConfigData) {

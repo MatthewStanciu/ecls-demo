@@ -3,7 +3,7 @@ import { ConfigData } from "../types/types";
 const dev = process.env.NODE_ENV !== "production";
 export const server = dev
   ? "http://localhost:3000"
-  : process.env.NEXT_PUBLIC_DASH_API_BASE_URL;
+  : "https://ecls-demo-dash.vercel.app";
 
 export const fetcher = (url: string) =>
   fetch(url, {
