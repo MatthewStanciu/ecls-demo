@@ -10,7 +10,7 @@ type ConfigData = {
 
 const server =
   process.env.NODE_ENV === "production"
-    ? process.env.DASH_API_BASE_URL
+    ? process.env.NEXT_PUBLIC_DASH_API_BASE_URL
     : "http://localhost:3000";
 
 async function log(req: NextRequest, route: string, data: ConfigData) {
