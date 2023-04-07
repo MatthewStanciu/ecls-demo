@@ -25,7 +25,7 @@ export default async (req: NextRequest) => {
       const { items } = data;
 
       await fetch(
-        `https://api.vercel.com/v1/edge-config/${process.env.EDGE_CONFIG_ID}/items?teamId=${process.env.TEAM_ID}`,
+        `https://api.vercel.com/v1/edge-config/${process.env.EDGE_CONFIG_ID}/items`,
         {
           method: "PATCH",
           headers: {
