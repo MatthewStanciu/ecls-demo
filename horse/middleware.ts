@@ -10,7 +10,7 @@ type ConfigData = {
 
 const server =
   process.env.NODE_ENV === "production"
-    ? "https://dash.puhack.horse"
+    ? process.env.DASH_API_BASE_URL
     : "http://localhost:3000";
 
 async function log(req: NextRequest, route: string, data: ConfigData) {
@@ -49,7 +49,7 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
 
     return NextResponse.redirect(data.d);
   } catch (err) {
-    return NextResponse.redirect("https://purduehackers.com");
+    return NextResponse.redirect(`${process.env.FALLBACK_URL}`);
   }
 }
 
